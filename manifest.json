@@ -1,0 +1,32 @@
+{
+
+ "manifest_version": 3,
+ "name": "Instagram Auto-Scroller",
+ "version": "1.0",
+ "description": "Auto-scrolling for Instagram Reels",
+  "author": "Rahul Kumar",
+  "homepage_url": "https://github.com/Mr-rahul85",
+  "homepage_url2":"https://linkedin.com/in/rahull-kumar",
+ "permissions": [
+ "storage",
+ "activeTab"
+ ],
+ "background": {
+ "service_worker": "background.js"
+ },
+ "content_scripts": [
+ {
+"matches": ["https://www.instagram.com/*"],
+ "js": ["content.js"],
+ "run_at": "document_end"
+ }
+ ],
+ "action": {
+ "default_popup": "popup/popup.html"
+ }, 
+ "icons": {
+ "16": "imgs/auto.png",
+ "48": "imgs/auto.png",
+ "128": "imgs/iauto.png"
+ }
+ }
